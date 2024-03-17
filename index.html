@@ -1,0 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {  
+    const form = document.getElementById('bookForm');  
+    form.addEventListener('change', function(e) {  
+        const checkedBoxes = form.querySelectorAll('input[type=checkbox]:checked');  
+        if (checkedBoxes.length > 3) {  
+            e.preventDefault();  
+            e.target.checked = false;  
+            alert('最多只能选择三本书！');  
+        }  
+    });  
+});
