@@ -1,11 +1,33 @@
-document.addEventListener('DOMContentLoaded', function() {  
-    const form = document.getElementById('bookForm');  
-    form.addEventListener('change', function(e) {  
-        const checkedBoxes = form.querySelectorAll('input[type=checkbox]:checked');  
-        if (checkedBoxes.length > 3) {  
-            e.preventDefault();  
-            e.target.checked = false;  
-            alert('最多只能选择三本书！');  
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>关注安和村委会微信公众号</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            text-align: center;  
+            padding: 20px;  
         }  
-    });  
-});
+        h1 {  
+            font-size: 24px;  
+        }  
+        p {  
+            font-size: 16px;  
+            margin-top: 10px;  
+        }  
+        #qrcode {  
+            width: 200px;  
+            height: 200px;  
+            margin: 20px auto;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <h1>欢迎关注安和村委会微信公众号</h1>  
+    <p>请长按以下二维码关注安和村委会公众号，获取更多精彩内容！</p>  
+    <img id="qrcode" src="公众号二维码.jpg" alt="微信公众号二维码">  
+    <p>感谢您的关注和支持！</p>  
+</body>  
+</html>
